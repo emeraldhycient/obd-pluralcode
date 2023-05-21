@@ -205,7 +205,7 @@ export default function Dashboard() {
                             </Table.Head>
                             <Table.Body className="divide-y">
                                 {
-                                    messages?.data?.map((message: any) => (
+                                    messages?.length > 0 || messages ? messages?.data?.map((message: any) => (
                                         <Table.Row className="divide-y" key={message.id}>
                                             <Table.Cell>
                                                 {message.dtc_code}
@@ -227,7 +227,10 @@ export default function Dashboard() {
                                         </Table.Row>
                                     )
                                     )
-                                       
+                                        :
+                                        <div className='flex justify-center items-center'>
+                                            No Data Found
+                                        </div>
                                 }
 
                             </Table.Body>
