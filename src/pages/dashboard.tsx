@@ -206,7 +206,7 @@ export default function Dashboard() {
                             </Table.Head>
                             <Table.Body className="divide-y">
                                 {
-                                   messages ? messages?.data?.map((message: any) => (
+                                   messages?.data?.length > 0 ? messages?.data?.map((message: any) => (
                                         <Table.Row className="divide-y" key={message.id}>
                                             <Table.Cell>
                                                 {message.dtc_code}
