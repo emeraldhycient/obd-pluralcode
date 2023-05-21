@@ -14,7 +14,8 @@ export default function Dashboard() {
     const [isModalShowing, setisModalShowing] = useState(false)
     const [isloading, setisLoading] = useState(false)
 
-    const [messages, setmessages] = useState([])
+    const [messages, setmessages] = useState("")
+
     const getAllMessage = async () => {
         setisLoading(true)
         try {
@@ -205,7 +206,7 @@ export default function Dashboard() {
                             </Table.Head>
                             <Table.Body className="divide-y">
                                 {
-                                    messages?.length > 0 || messages ? messages?.data?.map((message: any) => (
+                                   messages ? messages?.data?.map((message: any) => (
                                         <Table.Row className="divide-y" key={message.id}>
                                             <Table.Cell>
                                                 {message.dtc_code}
