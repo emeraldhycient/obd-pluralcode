@@ -14,7 +14,7 @@ export default function Dashboard() {
     const [isModalShowing, setisModalShowing] = useState(false)
     const [isloading, setisLoading] = useState(false)
 
-    const [messages, setmessages] = useState("")
+    const [messages, setmessages] = useState({data:[]})
 
     const getAllMessage = async () => {
         setisLoading(true)
